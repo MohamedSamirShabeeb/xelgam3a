@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XelGam3a (في الجامعة) - Season 1 Presentation Deck</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B132B',
+                            darkBlue: '#1C2541',
+                            gold: '#D4AF37',
+                            lightGold: '#F3E5AB',
+                            accent: '#48CAE4',
+                            charcoal: '#111827',
+                            sand: '#F7F5F0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        arabic: ['Cairo', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts for Cairo & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B132B;
+            overflow: hidden;
+        }
+        .slide {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .slide-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.98) translateY(10px);
+            position: absolute;
+        }
+        .slide-active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+            position: relative;
+        }
+        /* Custom scrollbar for inner scrollable containers */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(11, 19, 43, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.4);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 55, 0.6);
+        }
+    </style>
+</head>
+<body class="text-white h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER BAR -->
+    <header class="bg-brand-navy border-b border-white/10 px-6 py-3 flex items-center justify-between z-20">
+        <div class="flex items-center space-x-3">
+            <div class="bg-gradient-to-r from-brand-gold to-yellow-500 text-brand-navy font-black text-xl px-3 py-1 rounded shadow-md tracking-wider">
+                XelGam3a <span class="font-normal text-sm opacity-80">في الجامعة</span>
+            </div>
+            <span class="text-xs text-white/50 border-l border-white/20 pl-3 hidden md:inline">Season 1 Business & Operational Launch Deck</span>
+        </div>
+        
+        <!-- Quick Stats Badge -->
+        <div class="flex items-center space-x-4">
+            <span class="text-xs bg-brand-darkBlue border border-brand-gold/30 px-2.5 py-1 rounded-full text-brand-lightGold hidden sm:flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
+                72 Episodes • 6 Months
+            </span>
+            <button onclick="toggleSidebar()" class="text-white/80 hover:text-brand-gold transition p-1" title="View Slide Index">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN SLIDE AREA -->
+    <main class="flex-grow flex items-center justify-center p-4 md:p-8 overflow-y-auto relative">
+        <div class="w-full max-w-6xl bg-brand-darkBlue/75 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-6 md:p-10 h-full max-h-[80vh] flex flex-col justify-between relative overflow-hidden">
+            
+            <!-- Slides Container -->
+            <div class="flex-grow overflow-y-auto pr-1">
+
+                <!-- SLIDE 1: TITLE SLIDE -->
+                <div id="slide-1" class="slide slide-active h-full flex flex-col justify-center text-center space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-brand-gold font-bold tracking-widest text-xs uppercase bg-brand-navy/60 px-4 py-1.5 rounded-full border border-brand-gold/20 inline-block mb-3">
+                            Executive Pitch & Launch Strategy
+                        </span>
+                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            XelGam3a <span class="text-brand-gold font-arabic font-bold text-3xl md:text-5xl block md:inline ml-0 md:ml-3">في الجامعة</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-light">
+                            Bridging the transition from High School through Undergraduate Specialization to Advanced Postgrad Studies in Egypt.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto pt-6 text-left">
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 flex items-start gap-3">
+                            <span class="text-brand-gold font-bold text-lg mt-1">01</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-white">Pre-University</h3>
+                                <p class="text-xs text-white/60">Guiding High Schoolers to the right Business & Tech faculties.</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 flex items-start gap-3">
+                            <span class="text-brand-gold font-bold text-lg mt-1">02</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-white">Undergraduate</h3>
+                                <p class="text-xs text-white/60">Helping Business majors align specialties & corporate tracks.</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 flex items-start gap-3">
+                            <span class="text-brand-gold font-bold text-lg mt-1">03</span>
+                            <div>
+                                <h3 class="font-bold text-sm text-white">Postgraduate</h3>
+                                <p class="text-xs text-white/60">Decoding Master's, PhD, MBA & DBA roadmap obstacles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-xs text-white/40 pt-4 flex justify-center items-center gap-4">
+                        <span>🎙️ Recorded in Egyptian Colloquial Arabic</span>
+                        <span>•</span>
+                        <span>🇬🇧 Hard-coded English Subtitles</span>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: THE ECOSYSTEM PROBLEM & SOLUTIONS -->
+                <div id="slide-2" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Market Context</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The Egyptian Academic-to-Career Gap</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="space-y-4">
+                            <div class="bg-red-500/10 border border-red-500/20 p-4 rounded-xl space-y-2">
+                                <h3 class="font-bold text-red-400 flex items-center gap-2">
+                                    ❌ The Core Problem
+                                </h3>
+                                <p class="text-sm text-white/80 leading-relaxed">
+                                    Rigid career paths, traditional family biases, and lack of exposure leave high school and university students confused about actual industry demands. Furthermore, advanced postgrads study in isolation without commercial alignment.
+                                </p>
+                            </div>
+
+                            <div class="bg-green-500/10 border border-green-500/20 p-4 rounded-xl space-y-2">
+                                <h3 class="font-bold text-green-400 flex items-center gap-2">
+                                    💡 The XelGam3a Solution
+                                </h3>
+                                <p class="text-sm text-white/80 leading-relaxed">
+                                    An on-campus, open-air interactive masterclass that records dynamic podcast sessions showing actual pathways, hosted directly on the student's campus turf to drive peer validation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-navy/50 p-6 rounded-xl border border-white/5 space-y-4 text-center">
+                            <h4 class="text-xs font-semibold uppercase tracking-widest text-brand-gold">The Impact Funnel</h4>
+                            <div class="space-y-2.5">
+                                <div class="bg-brand-navy p-3 rounded border border-white/5 text-xs font-semibold">Pre-University: Target Best Faculty Choice</div>
+                                <div class="bg-brand-navy/85 p-3 rounded border border-white/5 text-xs font-semibold opacity-90">Undergraduate: Target Career Specialization</div>
+                                <div class="bg-brand-navy/70 p-3 rounded border border-white/5 text-xs font-semibold opacity-85">Postgrad: Academic R&D & DBA Return on Investment</div>
+                            </div>
+                            <p class="text-[11px] text-white/40 italic">A continuous lifecycle support system for the Egyptian high-achiever</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: TARGET AUDIENCES -->
+                <div id="slide-3" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Audience Profiling</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Three Highly Engaged Consumer Tiers</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Tier 1 -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3 relative overflow-hidden group hover:border-brand-gold/30 transition">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-blue-400"></div>
+                            <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Tier 1 • The Gateway</span>
+                            <h3 class="font-extrabold text-lg text-white">Pre-University</h3>
+                            <ul class="text-xs text-white/70 space-y-2">
+                                <li>🎓 <strong>Target:</strong> Thanaweya Amma, IGCSE, American Diploma & STEM.</li>
+                                <li>💡 <strong>Focus:</strong> De-stereotyping faculties (Econ, CS, IS, Political Science).</li>
+                                <li>🌍 <strong>Expat Angle:</strong> Direct paths via Egypt’s MoHE <em>Wafdeen</em> Registration platform.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tier 2 -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3 relative overflow-hidden group hover:border-brand-gold/30 transition">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-brand-gold"></div>
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Tier 2 • The Launchpad</span>
+                            <h3 class="font-extrabold text-lg text-white">Undergrads (Business)</h3>
+                            <ul class="text-xs text-white/70 space-y-2">
+                                <li>💼 <strong>Target:</strong> Public & private university business majors.</li>
+                                <li>💡 <strong>Focus:</strong> Sourcing summer internships, major selection frameworks.</li>
+                                <li>🚀 <strong>Corporate:</strong> Demystifying FMCG and banking assessment hubs.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tier 3 -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3 relative overflow-hidden group hover:border-brand-gold/30 transition">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-brand-accent"></div>
+                            <span class="text-xs font-bold text-brand-accent uppercase tracking-wider">Tier 3 • Think-Tank</span>
+                            <h3 class="font-extrabold text-lg text-white">Postgraduates</h3>
+                            <ul class="text-xs text-white/70 space-y-2">
+                                <li>🔬 <strong>Target:</strong> Master's, PhD, MBA & DBA researchers/execs.</li>
+                                <li>💡 <strong>Focus:</strong> Scopus publishing, funding proposals, Viva survival.</li>
+                                <li>💼 <strong>Industry:</strong> Turning high-level PhD findings into corporate R&D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: THE CONTENT MATRIX -->
+                <div id="slide-4" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Episode Architecture</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Comprehensive 24-Week Programming Roadmap</h2>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="border-b border-white/20 bg-brand-navy/75 text-brand-lightGold">
+                                    <th class="p-3 font-semibold">Phase</th>
+                                    <th class="p-3 font-semibold">Tier 1: Pre-University Gateway</th>
+                                    <th class="p-3 font-semibold">Tier 2: Business Launchpad</th>
+                                    <th class="p-3 font-semibold">Tier 3: Postgrad Think-Tank</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/5">
+                                <tr class="hover:bg-white/5 transition">
+                                    <td class="p-3 font-bold text-blue-400">Phase 1: Foundations<br><span class="text-[10px] text-white/40">Weeks 1-8</span></td>
+                                    <td class="p-3 text-white/80"><strong>Faculty Breakdown:</strong> True curriculum expectations in Economics & CS vs. traditional myths.</td>
+                                    <td class="p-3 text-white/80"><strong>Major Framework:</strong> Aligning internal pathways (e.g. Corporate Finance vs Marketing).</td>
+                                    <td class="p-3 text-white/80"><strong>Methodology & Roadmaps:</strong> Choosing MSc vs MBA, PhD vs DBA. Proposal blueprints.</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition">
+                                    <td class="p-3 font-bold text-brand-gold">Phase 2: The Hustle<br><span class="text-[10px] text-white/40">Weeks 9-16</span></td>
+                                    <td class="p-3 text-white/80"><strong>Academics & Life:</strong> Selection criteria for universities, tuition parameters & expat housing.</td>
+                                    <td class="p-3 text-white/80"><strong>The Corporate Runway:</strong> Writing resumes, competitive internships, passing assessments.</td>
+                                    <td class="p-3 text-white/80"><strong>Research Mechanics:</strong> Navigating supervisor relationships, data collection, and metrics.</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition">
+                                    <td class="p-3 font-bold text-brand-accent">Phase 3: The Future<br><span class="text-[10px] text-white/40">Weeks 17-24</span></td>
+                                    <td class="p-3 text-white/80"><strong>Real Market Salaries:</strong> The realistic entry values of graduates from major faculties.</td>
+                                    <td class="p-3 text-white/80"><strong>Career Crossroads:</strong> Entering corporate roles, global Master's tracks, or launching a startup.</td>
+                                    <td class="p-3 text-white/80"><strong>Defending & Publishing:</strong> Navigating Vivas, Scopus Q1 journal reviews, and monetization.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5: HIGH-CONCEPT EPISODE PROTOTYPES -->
+                <div id="slide-5" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Content Highlight</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Localized Episode Prototypes & Hooks</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- T1 Sample -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3">
+                            <span class="bg-blue-400/20 text-blue-300 text-[10px] font-bold px-2 py-1 rounded">Tier 1 Prototype</span>
+                            <h3 class="font-bold text-white text-sm">Computer Science vs. Information Systems</h3>
+                            <p class="text-xs text-white/70">An interview clarifying the critical difference between engineering software vs. technical management.</p>
+                            <div class="border-t border-white/10 pt-2 text-[11px] text-brand-lightGold italic">
+                                <strong>Hook:</strong> "Leh CS mesh heyya el-tareeq el-waheed le magal el-tech?"
+                            </div>
+                        </div>
+
+                        <!-- T2 Sample -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3">
+                            <span class="bg-brand-gold/20 text-brand-gold text-[10px] font-bold px-2 py-1 rounded">Tier 2 Prototype</span>
+                            <h3 class="font-bold text-white text-sm">Cracking Multinational FMCG Hiring</h3>
+                            <p class="text-xs text-white/70">An exclusive conversation with a Regional Talent Recruiter on unwritten screening rules & assessment tasks.</p>
+                            <div class="border-t border-white/10 pt-2 text-[11px] text-brand-lightGold italic">
+                                <strong>Hook:</strong> "3 things recruiters notice in group assessments that no one tells you about."
+                            </div>
+                        </div>
+
+                        <!-- T3 Sample -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-3">
+                            <span class="bg-brand-accent/20 text-brand-accent text-[10px] font-bold px-2 py-1 rounded">Tier 3 Prototype</span>
+                            <h3 class="font-bold text-white text-sm">DBA: Worth it in the Egyptian Market?</h3>
+                            <p class="text-xs text-white/70">A deep-dive with a PhD/DBA Academic Director assessing exact ROI for senior corporate executives.</p>
+                            <div class="border-t border-white/10 pt-2 text-[11px] text-brand-lightGold italic">
+                                <strong>Hook:</strong> "Is customized local expertise king, or does an MBA/DBA secure the C-Suite in Cairo?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 6: BATCH SHOOTING LOGISTICS RESIDENCY -->
+                <div id="slide-6" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Production Strategy</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The "Batch Shooting Residency" Model</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="space-y-4 text-sm text-white/80 leading-relaxed">
+                            <p>
+                                Producing 72 separate, weekly, high-quality on-campus episodes is logistically impossible. To resolve this, **XelGam3a** operates a streamlined **Residency Model**:
+                            </p>
+                            <div class="bg-brand-navy/80 p-4 rounded-xl border border-brand-gold/20 space-y-3">
+                                <h4 class="font-bold text-brand-gold text-xs uppercase tracking-wider">The 4-Day Campus Footprint</h4>
+                                <ul class="list-disc list-inside space-y-1.5 text-xs">
+                                    <li><strong>Days 1 & 2:</strong> Capture Tier 1 (8 episodes recorded)</li>
+                                    <li><strong>Day 3:</strong> Capture Tier 2 (8 episodes recorded)</li>
+                                    <li><strong>Day 4:</strong> Capture Tier 3 (8 episodes recorded)</li>
+                                </ul>
+                            </div>
+                            <p class="text-xs text-white/60">
+                                This captures 24 total episodes (one-third of the entire season) in just 4 days. We only need **3 multi-day campus residencies** in total for the entire year!
+                            </p>
+                        </div>
+
+                        <div class="bg-brand-navy/60 p-6 rounded-xl border border-white/5 space-y-4">
+                            <h3 class="font-bold text-white">Technical Footprint Specifications</h3>
+                            <div class="grid grid-cols-2 gap-3 text-xs">
+                                <div class="bg-brand-navy p-3 rounded space-y-1">
+                                    <span class="text-brand-gold font-bold">Set Design</span>
+                                    <p class="text-white/60">Modular, weather-proof outdoor courtyard setup.</p>
+                                </div>
+                                <div class="bg-brand-navy p-3 rounded space-y-1">
+                                    <span class="text-brand-gold font-bold">Audio Control</span>
+                                    <p class="text-white/60">Acoustic dampeners & high-end directional mics.</p>
+                                </div>
+                                <div class="bg-brand-navy p-3 rounded space-y-1">
+                                    <span class="text-brand-gold font-bold">Video Input</span>
+                                    <p class="text-white/60">Multi-cam 4K setup for post-prod short-cuts.</p>
+                                </div>
+                                <div class="bg-brand-navy p-3 rounded space-y-1">
+                                    <span class="text-brand-gold font-bold">Power Array</span>
+                                    <p class="text-white/60">Compliant, silent battery systems to avoid academic noise.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7: OMNICHANNEL DISTRIBUTION MATRIX -->
+                <div id="slide-7" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Media Plan</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Integrated Multi-Platform Distribution</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Primary Formats -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-4">
+                            <h3 class="font-bold text-white text-sm">Long & Short-Form Architecture</h3>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="bg-red-500/10 p-2 rounded text-red-400">🎥</div>
+                                    <div>
+                                        <h4 class="font-bold text-xs text-white">YouTube & Long Video</h4>
+                                        <p class="text-xs text-white/60">Streamed weekly with high-quality English subtitles to retain international audience segments.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="bg-green-500/10 p-2 rounded text-green-400">🎙️</div>
+                                    <div>
+                                        <h4 class="font-bold text-xs text-white">Spotify & Apple Podcasts</h4>
+                                        <p class="text-xs text-white/60">Pure audio distribution containing clear, high-yield academic insights for multi-tasking students.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="bg-blue-500/10 p-2 rounded text-blue-400">⚡</div>
+                                    <div>
+                                        <h4 class="font-bold text-xs text-white">TikTok, Reels & FB Video</h4>
+                                        <p class="text-xs text-white/60">Highly relatable, bilingual (Franco-Arabic) captions matched with 60s fast-cut educational clips.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Exclusion -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-white/5 space-y-4 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <span class="bg-brand-gold/10 text-brand-gold text-[10px] font-bold px-2 py-1 rounded">Exclusive Network Rule</span>
+                                <h3 class="font-bold text-white text-sm">LinkedIn for Tier 3 Only</h3>
+                                <p class="text-xs text-white/70 leading-relaxed">
+                                    To protect academic credibility and target senior experts, PhD supervisors, and business advisors, **LinkedIn will be utilized exclusively for Tier 3 (Postgraduate Think-Tank)**.
+                                </p>
+                            </div>
+                            <div class="bg-brand-navy p-3 rounded text-xs border border-white/5">
+                                📈 <strong>Deliverables:</strong> Interactive polls on academic issues, formal text summaries of findings, and professional networking assets. No casual Gen-Z short trends on LinkedIn.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 8: THE LIVE HUB ACTIVATION -->
+                <div id="slide-8" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Experiential Marketing</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">The On-Campus "Live Hub"</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="space-y-4">
+                            <p class="text-sm text-white/80 leading-relaxed">
+                                We don’t just record a podcast; we activate a full, live, experiential career counseling village directly surrounding the open-air studio set:
+                            </p>
+                            <div class="space-y-3">
+                                <div class="bg-brand-navy/50 p-4 rounded-xl border border-white/5 flex gap-3">
+                                    <div class="text-2xl">📝</div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">The CV Clinic</h4>
+                                        <p class="text-xs text-white/60">In partnership with corporate sponsors, HR professionals review students' CVs live on site.</p>
+                                    </div>
+                                </div>
+                                <div class="bg-brand-navy/50 p-4 rounded-xl border border-white/5 flex gap-3">
+                                    <div class="text-2xl">🧩</div>
+                                    <div>
+                                        <h4 class="font-bold text-sm text-white">The Major Matchmaker</h4>
+                                        <p class="text-xs text-white/60">Students complete a rapid digital assessment to map their metrics to optimized academic pathways.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-navy/40 p-6 rounded-xl border border-white/5 space-y-4 text-center">
+                            <h3 class="font-bold text-white text-sm">Visualizing the Layout</h3>
+                            <!-- Mock Diagram -->
+                            <div class="border border-white/10 rounded-lg p-4 space-y-2.5 text-xs relative overflow-hidden bg-brand-navy/80">
+                                <div class="bg-brand-gold text-brand-navy font-bold py-1 rounded">STAGE: Live Podcast Recording (Open-Air)</div>
+                                <div class="flex gap-2">
+                                    <div class="bg-brand-navy/60 p-2 rounded border border-white/5 w-1/2">
+                                        🏫 Campus Seating Area
+                                    </div>
+                                    <div class="bg-brand-navy/60 p-2 rounded border border-white/5 w-1/2">
+                                        👔 Sponsor CV Booths
+                                    </div>
+                                </div>
+                                <div class="bg-brand-accent/10 border border-brand-accent/20 py-1 rounded text-[10px]">
+                                    Direct High-Traffic Student Flow
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-white/40 italic">A turnkey, professional experiential asset that adds value to university student-life teams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 9: DUAL-BENEFIT VALUE MATRIX -->
+                <div id="slide-9" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Monetization Framework</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Our Strategic Dual-Sponsorship Model</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- University Side -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-brand-gold/20 space-y-4">
+                            <h3 class="font-extrabold text-brand-gold text-base flex items-center gap-2">
+                                🏫 University Hosting Partners
+                            </h3>
+                            <p class="text-xs text-white/80 leading-relaxed">
+                                No direct budget is requested from academic institutions. Instead, universities serve as structural and marketing co-sponsors.
+                            </p>
+                            <div class="space-y-2 text-xs">
+                                <div class="bg-brand-navy p-3 rounded flex justify-between">
+                                    <span>👉 <strong>Provide:</strong> Courtyard Venue & Power</span>
+                                    <span class="text-green-400">FREE</span>
+                                </div>
+                                <div class="bg-brand-navy p-3 rounded flex justify-between">
+                                    <span>👉 <strong>Provide:</strong> Student Database Push</span>
+                                    <span class="text-green-400">FREE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Corporate Side -->
+                        <div class="bg-brand-navy/60 p-5 rounded-xl border border-brand-accent/20 space-y-4">
+                            <h3 class="font-extrabold text-brand-accent text-base flex items-center gap-2">
+                                🏢 Corporate Financial Partners
+                            </h3>
+                            <p class="text-xs text-white/80 leading-relaxed">
+                                Corporate entities (banks, tech giants, telecoms, fintech providers) fund production and distribution budgets.
+                            </p>
+                            <div class="space-y-2 text-xs">
+                                <div class="bg-brand-navy p-3 rounded flex justify-between">
+                                    <span>👉 <strong>Provide:</strong> Capital Underwriting</span>
+                                    <span class="text-blue-300">Sponsorship</span>
+                                </div>
+                                <div class="bg-brand-navy p-3 rounded flex justify-between">
+                                    <span>👉 <strong>Provide:</strong> Recruitment Advisors</span>
+                                    <span class="text-blue-300">Staffing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 10: UNIVERSITY PARTNERSHIP VALUE PROP -->
+                <div id="slide-10" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Why Host?</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Unlocking Value for University Partners</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div class="space-y-4 text-xs md:text-sm text-white/80">
+                            <p>
+                                By offering your central open-air courtyards as hosts for the **XelGam3a Campus Residency**, your university secures significant institutional returns:
+                            </p>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center gap-2 bg-brand-navy p-3 rounded">
+                                    <span class="text-brand-gold text-lg">💡</span>
+                                    <span><strong>Thought Leadership:</strong> Direct spotlights for department chairs & professors.</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-brand-navy p-3 rounded">
+                                    <span class="text-brand-gold text-lg">🌍</span>
+                                    <span><strong>International Enrollment:</strong> Marketing your programs to foreign fee-paying (*Wafdeen*) candidates.</span>
+                                </div>
+                                <div class="flex items-center gap-2 bg-brand-navy p-3 rounded">
+                                    <span class="text-brand-gold text-lg">🤝</span>
+                                    <span><strong>Employer Networking:</strong> Connecting your senior researchers & students directly to global entities.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Pitch Callout -->
+                        <div class="bg-brand-navy/60 p-6 rounded-xl border border-white/5 space-y-3">
+                            <span class="text-brand-gold text-[10px] font-bold uppercase tracking-widest block">Academic Prestige Focus</span>
+                            <h4 class="font-bold text-white text-sm">Elevate Your Departmental Status</h4>
+                            <p class="text-xs text-white/70 leading-relaxed">
+                                Standard enrollment marketing is declining. Forward-thinking universities require experiential, high-impact branding. Hosting **XelGam3a** shows your student body and stakeholders that your institution is a proactive pathway to regional commercial success.
+                            </p>
+                            <div class="border-t border-white/10 pt-3 text-[11px] text-white/40 italic text-center">
+                                Zero friction, silent production crew footprint.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 11: CORPORATE PARTNERSHIP VALUE PROP -->
+                <div id="slide-11" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">Why Sponsor?</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Targeted Recruitment for Corporate Partners</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <!-- Stat card -->
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 text-center space-y-2">
+                            <span class="text-2xl">🎯</span>
+                            <h4 class="font-bold text-white">Elite Pipeline Access</h4>
+                            <p class="text-white/60">Obtain early-access portfolios and direct resumes of top-ranking scholars and bilingual specialists across major Egyptian hubs.</p>
+                        </div>
+                        
+                        <!-- Stat card -->
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 text-center space-y-2">
+                            <span class="text-2xl">🌱</span>
+                            <h4 class="font-bold text-white">Native Employer Branding</h4>
+                            <p class="text-white/60">Position your company executives on high-engagement episodes as career coaches, embedding your corporate values directly into students' minds.</p>
+                        </div>
+
+                        <!-- Stat card -->
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 text-center space-y-2">
+                            <span class="text-2xl">📊</span>
+                            <h4 class="font-bold text-white">Direct Lead Metrics</h4>
+                            <p class="text-white/60">Generate verifiable, opt-in lead parameters from on-site Live Hub interactive booths (CV Clinics & Major Matchmakers).</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-navy/80 p-4 rounded-xl border border-brand-accent/20 text-center text-xs">
+                        🌐 <strong>Regional Talent Scope:</strong> Egypt operates as the master operations hub for the entire Middle East & Africa. Gain immediate, early brand loyalty among highly skilled scholars looking to operate locally or relocate regionally.
+                    </div>
+                </div>
+
+                <!-- SLIDE 12: EXECUTION MILESTONES & NEXT STEPS -->
+                <div id="slide-12" class="slide slide-hidden space-y-6">
+                    <div class="border-b border-white/10 pb-3">
+                        <span class="text-brand-gold text-xs font-semibold uppercase tracking-widest">The Timeline</span>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white">Roadmap to Launch & Milestones</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 relative">
+                            <span class="absolute top-3 right-3 text-brand-gold font-bold">Month 1</span>
+                            <h4 class="font-bold text-white mb-2">Academic Alignment</h4>
+                            <p class="text-white/60">Pitch & finalize the first 3 University Hosting Partners. Draft speaking schedules with Dean boards.</p>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 relative">
+                            <span class="absolute top-3 right-3 text-brand-gold font-bold">Month 2</span>
+                            <h4 class="font-bold text-white mb-2">Corporate Sourcing</h4>
+                            <p class="text-white/60">Close season funding with Primary & Associate Brand Sponsors. Finalize Live Hub activations.</p>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 relative">
+                            <span class="absolute top-3 right-3 text-brand-gold font-bold">Month 3</span>
+                            <h4 class="font-bold text-white mb-2">First Residency</h4>
+                            <p class="text-white/60">Execute 4-Day Batch Residency 1 on Host Campus 1. Produce & edit initial 24-episode bank.</p>
+                        </div>
+                        <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5 relative">
+                            <span class="absolute top-3 right-3 text-brand-gold font-bold">Month 4</span>
+                            <h4 class="font-bold text-white mb-2">Broadcast Kickoff</h4>
+                            <p class="text-white/60">Initiate weekly omnichannel drops across audio & video portfolios. Launch LinkedIn engagement loops.</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+                        <span class="text-white/60">Let's build a prestigious, culturally resonant bridges for Egyptian students.</span>
+                        <div class="bg-brand-gold/15 border border-brand-gold text-brand-lightGold px-4 py-2 rounded-lg font-bold">
+                            🚀 Ready to Launch XelGam3a
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM CONTROL BAR -->
+            <div class="border-t border-white/10 pt-4 mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <!-- Slide count indicator -->
+                <div class="text-white/60 font-semibold flex items-center space-x-2">
+                    <span>Slide</span>
+                    <span id="current-slide-num" class="text-brand-gold font-bold text-sm">1</span>
+                    <span>of</span>
+                    <span id="total-slides-num" class="text-white/80">12</span>
+                </div>
+
+                <!-- Global presentation progress bar -->
+                <div class="w-full max-w-xs bg-white/10 h-1.5 rounded-full overflow-hidden hidden md:block">
+                    <div id="progress-bar" class="bg-gradient-to-r from-brand-gold to-yellow-500 h-full transition-all duration-300" style="width: 8.33%"></div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="toggleNotes()" class="bg-brand-darkBlue border border-white/15 text-white hover:text-brand-gold hover:border-brand-gold/40 transition px-3 py-1.5 rounded-lg font-semibold flex items-center gap-1" title="Show/Hide Presentation Insights">
+                        💡 <span>Show Notes</span>
+                    </button>
+                    <button id="prev-btn" onclick="prevSlide()" class="bg-brand-navy border border-white/10 hover:border-brand-gold/40 transition p-2 rounded-lg disabled:opacity-30 disabled:pointer-events-none text-white hover:text-brand-gold" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next-btn" onclick="nextSlide()" class="bg-brand-navy border border-white/10 hover:border-brand-gold/40 transition p-2 rounded-lg disabled:opacity-30 disabled:pointer-events-none text-white hover:text-brand-gold">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SPEAKER NOTES SIDE DRAWER PANEL -->
+    <section id="speaker-notes" class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-brand-navy/95 border border-brand-gold/30 rounded-xl p-4 text-xs shadow-2xl z-40 backdrop-blur-md">
+        <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-2">
+            <span class="text-brand-gold font-bold flex items-center gap-1">💡 Speaker Notes & Strategic Guidance</span>
+            <button onclick="toggleNotes()" class="text-white/60 hover:text-white">&times;</button>
+        </div>
+        <div id="notes-content" class="text-white/80 leading-relaxed max-h-32 overflow-y-auto">
+            Opening Slide: Use this slide to set the tone. Define "XelGam3a" clearly. Position it as Egypt's first unified academic career guidance ecosystem built over 3 distinct life-tiers.
+        </div>
+    </section>
+
+    <!-- SLIDE LIST INDEX SIDEBAR -->
+    <aside id="sidebar" class="fixed right-0 top-0 h-full w-80 bg-brand-navy border-l border-white/10 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-30 overflow-y-auto">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+            <h3 class="font-extrabold text-brand-gold text-sm tracking-wider uppercase">Slide Index</h3>
+            <button onclick="toggleSidebar()" class="text-white/60 hover:text-white text-lg">&times;</button>
+        </div>
+        <nav class="space-y-2 text-xs" id="sidebar-nav-list">
+            <!-- Populated dynamically by JS -->
+        </nav>
+    </aside>
+
+    <!-- FLOATING UTILITY COMMANDS (FOR SCREEN PRESENTERS) -->
+    <footer class="bg-brand-navy border-t border-white/10 px-6 py-2 flex items-center justify-between text-[11px] text-white/50 z-20">
+        <div class="flex items-center space-x-4">
+            <span>💡 Left/Right Arrow or Space keys to navigate</span>
+            <span>•</span>
+            <button onclick="enterAllView()" class="hover:text-brand-gold transition underline">Printable/All-Slide View</button>
+        </div>
+        <div>
+            <span>XelGam3a © 2026 Initiative</span>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        const totalSlides = 12;
+        let currentSlide = 1;
+
+        // Structured Speaker Notes mapped to each slide for the presenter's use
+        const speakerNotesMap = {
+            1: "Opening Slide: Introduce yourself and the brand identity. Explain that 'XelGam3a' translates to 'In the University' in Colloquial Franco-Arabic, providing instant relatability for Egyptian youths. State the core goal: mapping the transition from high school to postgrad execution.",
+            2: "Ecosystem Context: Emphasize the massive structural gap in Egypt. Show that other services only provide advice, while XelGam3a builds a practical pipeline. This helps address the issue of misaligned faculties early on.",
+            3: "Audience Profiling: Walk through the three tiers. Point out how we integrated International (Wafdeen) high-school and undergraduate student pipelines to increase foreign currency returns for host universities and satisfy global FMCG requirements.",
+            4: "Programming Table: Walk through the parallel tracks. Point out how Phase 1 builds foundational academic expectations, Phase 2 implements tactical steps (CV formatting, supervisor relations), and Phase 3 finishes with salary realities and publication monetization.",
+            5: "Episode Prototypes: Give concrete examples of how episodes sound. Read out the viral bilingual social hooks. Explain how they bridge academic jargon with catchy slang to secure massive organic digital viewership.",
+            6: "The Batch Shooting Residency: This is our operational secret weapon. Explain that instead of shooting weekly on separate campuses, we spend 4 days on 1 single campus to record 24 episodes. Saves 75% on production, logistics, and crew transport.",
+            7: "Omnichannel Distribution Matrix: Emphasize our strict multi-channel approach. Explain that while standard social networks (TikTok, IG, Facebook) capture Tiers 1 and 2, LinkedIn is used EXCLUSIVELY for Tier 3 to maintain elite scholarly positioning.",
+            8: "The On-Campus Live Hub: Show how the recording stage turns into a full physical student activation village. Our CV clinics and digital matchmaking kiosks ensure constant student engagement adjacent to our live set.",
+            9: "Dual-Sponsorship Structure: Explain that we don't ask universities for direct budgets. We secure free campus venues in exchange for media and student readiness value. Corporate sponsors fund everything because they get direct recruiting access.",
+            10: "University Value Proposition: Pitch slide for Deans. Highlight that universities compete heavily to attract Wafdeen (foreign paying) students. Feature their academic programs and campus directly to this lucrative demographic.",
+            11: "Corporate Value Proposition: Pitch slide for corporate sponsors. We offer them high-impact employer branding and direct talent pipelines from the best universities. They can set up recruitment tents adjacent to the stage.",
+            12: "The Roadmap & Timeline: Detail our implementation schedule. Ask our team and potential partners for immediate alignment to lock in the host universities for residency blocks 1, 2, and 3."
+        };
+
+        const slideTitles = [
+            "XelGam3a Launch Deck",
+            "The Egyptian Academic Gap",
+            "Three Highly Engaged Consumer Tiers",
+            "24-Week Programming Calendar",
+            "Episode Prototypes & Hooks",
+            "Batch Shooting Residency",
+            "Multi-Platform Distribution",
+            "The On-Campus Live Hub",
+            "Dual-Sponsorship Model",
+            "University Host Value Prop",
+            "Corporate Sponsor Value Prop",
+            "Roadmap to Launch"
+        ];
+
+        // Initialize presentation parameters
+        window.onload = function() {
+            document.getElementById('total-slides-num').innerText = totalSlides;
+            buildSidebarNav();
+            updateSlideView();
+        };
+
+        // Navigation Engine
+        function showSlide(slideIndex) {
+            if (slideIndex < 1 || slideIndex > totalSlides) return;
+            
+            // Deactivate current slide
+            const prevActive = document.getElementById(`slide-${currentSlide}`);
+            if (prevActive) {
+                prevActive.classList.remove('slide-active');
+                prevActive.classList.add('slide-hidden');
+            }
+
+            // Activate new slide
+            currentSlide = slideIndex;
+            const nextActive = document.getElementById(`slide-${currentSlide}`);
+            if (nextActive) {
+                nextActive.classList.remove('slide-hidden');
+                nextActive.classList.add('slide-active');
+            }
+
+            updateSlideView();
+        }
+
+        function updateSlideView() {
+            // Update counts & progress bar
+            document.getElementById('current-slide-num').innerText = currentSlide;
+            const progressPercent = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress-bar').style.width = `${progressPercent}%`;
+
+            // Enable/disable navigation buttons
+            document.getElementById('prev-btn').disabled = (currentSlide === 1);
+            document.getElementById('next-btn').disabled = (currentSlide === totalSlides);
+
+            // Update speaker notes
+            document.getElementById('notes-content').innerText = speakerNotesMap[currentSlide] || "No notes available for this slide.";
+
+            // Highlight active slide in sidebar
+            const links = document.querySelectorAll('.sidebar-nav-link');
+            links.forEach((link, idx) => {
+                if (idx + 1 === currentSlide) {
+                    link.classList.add('text-brand-gold', 'bg-brand-darkBlue', 'border-l-2', 'border-brand-gold');
+                    link.classList.remove('text-white/60');
+                } else {
+                    link.classList.remove('text-brand-gold', 'bg-brand-darkBlue', 'border-l-2', 'border-brand-gold');
+                    link.classList.add('text-white/60');
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Sidebar Controller
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('translate-x-full')) {
+                sidebar.classList.remove('translate-x-full');
+                sidebar.classList.add('translate-x-0');
+            } else {
+                sidebar.classList.add('translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+            }
+        }
+
+        function buildSidebarNav() {
+            const container = document.getElementById('sidebar-nav-list');
+            container.innerHTML = '';
+            slideTitles.forEach((title, idx) => {
+                const link = document.createElement('button');
+                link.className = 'w-full text-left p-2.5 rounded hover:bg-white/5 transition flex items-center gap-2.5 sidebar-nav-link text-white/60';
+                link.onclick = function() {
+                    showSlide(idx + 1);
+                    toggleSidebar();
+                };
+                link.innerHTML = `<span class="font-bold text-brand-gold/80">${String(idx + 1).padStart(2, '0')}</span> <span>${title}</span>`;
+                container.appendChild(link);
+            });
+        }
+
+        // Toggles Speaker Notes Panel
+        function toggleNotes() {
+            const panel = document.getElementById('speaker-notes');
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // Printable / Scroll All Slides View Toggle
+        function enterAllView() {
+            const confirmView = confirm("This will switch to a clean scrollable list view of all slides for printing or review. Refresh the page to return to interactive presentation mode. Proceed?");
+            if (confirmView) {
+                // Change body to normal scrollable container
+                document.body.style.overflow = "auto";
+                document.body.style.height = "auto";
+                
+                // Hide header and control bars
+                document.querySelector('header').style.display = "none";
+                document.querySelector('footer').style.display = "none";
+                document.querySelector('main').classList.remove('p-4', 'md:p-8', 'overflow-y-auto');
+                document.querySelector('main').classList.add('p-8', 'bg-brand-navy');
+                
+                // Unhide and layout all slides vertically
+                const slides = document.querySelectorAll('.slide');
+                slides.forEach((slide, idx) => {
+                    slide.classList.remove('slide-hidden');
+                    slide.classList.add('slide-active', 'mb-12', 'pb-12', 'border-b', 'border-white/10');
+                });
+
+                const container = document.querySelector('main > div');
+                container.classList.remove('max-h-[80vh]');
+                container.style.maxHeight = "none";
+                
+                // Hide controls at bottom
+                document.querySelector('main > div > div:last-child').style.display = "none";
+            }
+        }
+
+        // Keyboard Navigation Support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ' || event.key === 'Spacebar') {
+                event.preventDefault();
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                prevSlide();
+            }
+        });
+
+        // Touch swiping navigation for mobile tablets
+        let touchstartX = 0;
+        let touchendX = 0;
+        
+        document.addEventListener('touchstart', function(event) {
+            touchstartX = event.changedTouches[0].screenX;
+        }, false);
+
+        document.addEventListener('touchend', function(event) {
+            touchendX = event.changedTouches[0].screenX;
+            handleGesture();
+        }, false);
+
+        function handleGesture() {
+            if (touchendX < touchstartX - 50) {
+                nextSlide(); // Swiped Left
+            }
+            if (touchendX > touchstartX + 50) {
+                prevSlide(); // Swiped Right
+            }
+        }
+    </script>
+</body>
+</html>
